@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0d3;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   display: flex;
@@ -7,74 +7,100 @@ body {
   align-items: center;
   gap: 60px;
   margin-bottom: 100px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Heading */
 .heading {
-  color: blue;
+  color: #333;
   font-size: 48px;
   text-align: center;
   margin-top: 20px;
-  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .heading:hover {
   color: darkblue;
 }
 
+/* Paragraph */
 .paragraph {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.5;
-  margin: 20px;
+  font-size: 22px;
+  line-height: 1.6;
+  margin: 20px auto;
   color: #333;
+  max-width: 800px;
+  text-align: center;
 }
 
+/* Start button section */
 .start {
-  display: block;
-  width: 300px;
+  display: inline-block;
+  padding: 15px 30px;
   margin: 20px auto;
-  padding: 10px;
   background-color: #28a745;
   color: white;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 24px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.start:hover {
+  background-color: #218838;
+  transform: scale(1.05);
 }
 
 .start img {
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 300px;
-  height: 300px;
+  display: block;
+  margin: 10px auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Links */
 .link {
   color: #0066cc;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .link:hover {
   text-decoration: underline;
 }
 
+/* Lists */
 .list-section {
-  margin: 20px;
   display: flex;
-  flex-direction: horizontal;
-  gap: 200px;
+  justify-content: center;
+  gap: 100px;
+  margin: 40px auto;
 }
 
 .list-section ul {
   list-style-type: square;
   padding-left: 20px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .list-item {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #555;
-  font-size: 24px;
+  font-size: 20px;
   transition: color 0.3s;
+}
+
+.list-item:hover {
+  color: #000;
 }
 
 .quiz-section,
@@ -108,5 +134,53 @@ body {
   margin-top: 15px;
   font-size: 18px;
   color: #333;
+  font-weight: bold;
+}
+
+/* Shared styling for both sections */
+.emoji-ai,
+.riddle-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 60%;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.emoji-ai h2,
+.riddle-section h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.emoji-ai button,
+.riddle-section button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #28a745; /* green to match your earlier theme */
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.emoji-ai button:hover,
+.riddle-section button:hover {
+  background-color: #1e7e34;
+}
+
+/* Output text */
+#emojiOutput,
+#riddleOutput {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #555;
   font-weight: bold;
 }

@@ -38,3 +38,20 @@ factBtn.addEventListener("click", () => {
   const randomFact = facts[Math.floor(Math.random() * facts.length)];
   factOutput.textContent = randomFact;
 });
+
+const moods = ["😃", "🤯", "🤖", "🔥", "🧠", "💡", "🎉", "⚡"];
+document.getElementById("emojiBtn").addEventListener("click", () => {
+  const mood = moods[Math.floor(Math.random() * moods.length)];
+  document.getElementById("emojiOutput").textContent = `AI says: ${mood}`;
+});
+
+const riddles = [
+  "I speak in 0s and 1s, but I create worlds. What am I? (💻)",
+  "The more you take out of me, the bigger I get. What am I? (🕳️ memory)",
+  "I can learn from data but I’m not human. What am I? (🤖 AI)",
+];
+
+document.getElementById("riddleBtn").addEventListener("click", () => {
+  document.getElementById("riddleOutput").textContent =
+    riddles[Math.floor(Math.random() * riddles.length)];
+});
